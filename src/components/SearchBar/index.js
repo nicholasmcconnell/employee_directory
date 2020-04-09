@@ -4,18 +4,26 @@ import "./style.css";
 // Using the datalist element we can create autofill suggestions based on the props.breeds array
 function SearchBar(props) {
   return (
-  <div className="container">
-    
-    <form className="search">
-      <div className="form-group">
-        <label htmlFor="language">Search:</label>
-    <input type="password" className="form-control" id="search" placeholder="Search"></input>
-    <button type="submit" className="btn btn-primary">Search</button>
+    <div className="container">
+
+      <form className="search">
+        <div className="form-group">
+          <label htmlFor="language">Search:</label>
+          <input type="password" className="form-control" id="search" placeholder="Search"></input>
+          <button type="submit" className="btn btn-primary">Search</button>
 
 
-      </div>
-    </form>
+        </div>
+      </form>
     </div>
+
+
+//API call function needs to be converted to newer syntax
+// searchMovies = query => {
+//     API.search(query)
+//       .then(res => this.setState({ result: res.data }))
+//       .catch(err => console.log(err));
+//   };
     //API week 20 activity 10
 
 //     <form>
