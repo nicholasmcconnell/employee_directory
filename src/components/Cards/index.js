@@ -1,22 +1,25 @@
 import React from 'react'
-import "style.css";
+// import "style.css";
 
-function Cards() {
+function Cards(props) {
     return (
-        <div className="card">
+    <div className="card">
             <div className="img-container">
 
             </div>
             <div className="content">
                 <ul>
                     <li>
-                        <strong>Name:</strong>
+                        <strong>Photo:{props.employee.picture.thumbnail}</strong>
                     </li>
                     <li>
-                        <strong>Occupation:</strong>
+                        Name: {props.employee.name.title}
                     </li>
                     <li>
-                        <strong>Location:</strong>
+                        <strong>phone:{props.employee.phone}</strong>
+                    </li>
+                    <li>
+                        <strong>Dob: {props.employee.dob.date}</strong>
                     </li>
                 </ul>
             </div>
