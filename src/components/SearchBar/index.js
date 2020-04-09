@@ -24,7 +24,7 @@ function SearchBar(props) {
 //       .then(res => this.setState({ result: res.data }))
 //       .catch(err => console.log(err));
 //   };
-    //API week 20 activity 10
+    //API week 20 activity 3s
 
 //     <form>
 //       <div class="form-group">
