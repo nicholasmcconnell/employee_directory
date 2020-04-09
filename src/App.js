@@ -9,8 +9,8 @@ import Header from './components/Header'
 import Cards from './components/Cards';
 
 function App() {
-  const [employeeList, setEmployeeList] = useState([]);
-  // const [employeeListMaster, setEmployeeListMaster] = useState([]);
+  let [employeeList, setEmployeeList] = useState([]);
+  const [employeeListMaster, setEmployeeListMaster] = useState([]);
   const [search, setSearch] = useState("");
   // const [error, setError] = useState("");
   //1. user is typing
@@ -20,69 +20,68 @@ function App() {
   console.log("search " + search)
 
   useEffect(() => console.log(employeeList), [employeeList]);
-  // useEffect(() => console.log(employeeListMaster), [employeeListMaster]);
+  useEffect(() => console.log(employeeListMaster), [employeeListMaster]);
+
   useEffect(() => {
 
     // if (!search) {
-    //   return;
+      // return;
     // }
 
     API.search()
       .then(res => {
         setEmployeeList(res.data.results);
-        // setEmployeeListMaster(res.data.results);
-
-        // console.log(res);
+        setEmployeeListMaster(res.data.results);
       })
       .catch(err => console.log("error"));
 
 
   }, []);
 
-  const handleInputChange = event => {
-    console.log("in handleInputChange");
-    setSearch(event.target.value);
-    console.log(event.target.value)
-    //1 get that user has types;
-    //2. filter employeelistMaster
-    //3. for employes matching first or last name of what user has typed
-    //4. set employeelist (not master) to new filtered array
-    //5. check it .target is empty string, display employee list master - set employess list to equal employeelistMaster
-
-    // if (!event.target.value) {
-    //   setEmployeeList([...employeeListMaster])
-    // }
-
-    // const { name, value } = event.target;
-
-    
-    // Updating the input's state
 
 
-  };
+const handleInputChange = event => {
+  console.log("in handleInputChange");
+  // setSearch(event.target.value);
+  // console.log(event.target.value)
+  // 1 get that user has types;
+  //2. filter employeelistMaster
+  //3. for employes matching first or last name of what user has typed
+  //4. set employeelist (not master) to new filtered array
+  //5. check it .target is empty string, display employee list master - set employess list to equal employeelistMaster
 
-  return (
+  // if (!event.target.value) {
+  //   setEmployeeList([...employeeListMaster])
+  // }
 
-    <div className="App">
-      <header className="App-header">
-        <Header />
+  setEmployeeList(employeeListMaster.filter(employee => {console.log(employee.name);return employee.name.title === event.target.value}));
+  console.log(employeeList);
+  //should this function be a new compononend?
+  // const filterMaster = (employeeList, employeeListMaster, search) => {
 
-      </header>
+  // };
+}
 
-      <SearchBar
-        // handleFormSubmit={handleFormSubmit}
-        handleInputChange={handleInputChange}
-        results={search} 
-        />
-      {/* <div><SearchBar /></div> */}
-      {employeeList.map(employee => (
+return (
 
-        <Cards key={employee.id.value} employee={employee} />
-      ))}
+  <div className="App">
+    <header className="App-header">
+      <Header />
 
+    </header>
 
-    </div>
-  );
+    <SearchBar
+      // handleFormSubmit={handleFormSubmit}
+      handleInputChange={handleInputChange}
+      results={search}
+    />
+    {/* <div><SearchBar /></div> */}
+    {employeeList.map(employee => (
+
+      <Cards key={employee.id.value} employee={employee} />
+    ))}
+  </div>
+);
 }
 
 export default App;
