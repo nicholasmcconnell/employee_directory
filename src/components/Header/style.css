@@ -1,3 +1,16 @@
-.header {
-    height: 100px;
+header {
+    height: 200px;
+    font-weight: bold;
+    color: red;
+    background-color: darkblue;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
+.display-3 {
+    height: 600px;
 }
+
