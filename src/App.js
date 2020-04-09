@@ -17,6 +17,8 @@ function App() {
   //2. as search fills names are filtered to match search
   //3. once complete only matches name
 
+  console.log("search " + search)
+
   useEffect(() => console.log(employeeList), [employeeList]);
   // useEffect(() => console.log(employeeListMaster), [employeeListMaster]);
   useEffect(() => {
@@ -60,23 +62,24 @@ function App() {
   };
 
   return (
+
     <div className="App">
       <header className="App-header">
         <Header />
 
       </header>
 
-      <div><SearchBar /></div>
-      {employeeList.map(employee => (
-
-        <Cards key={employee.id.value} employee={employee} />
-      ))}
-
       <SearchBar
         // handleFormSubmit={handleFormSubmit}
         handleInputChange={handleInputChange}
         results={search} 
         />
+      {/* <div><SearchBar /></div> */}
+      {employeeList.map(employee => (
+
+        <Cards key={employee.id.value} employee={employee} />
+      ))}
+
 
     </div>
   );

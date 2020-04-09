@@ -11,7 +11,6 @@ function SearchBar(props) {
         <div className="form-group">
           <h3>Search:</h3>
           <input
-            value={props.search}
             onChange={props.handleInputChange}
             name="term"
             list="term"
