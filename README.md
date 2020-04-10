@@ -2,6 +2,8 @@ TODO
 
 1. Each employee getting a unique ID.
 
+Katy - deBounce and props destructuring
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

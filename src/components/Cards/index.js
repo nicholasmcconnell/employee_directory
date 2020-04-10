@@ -13,7 +13,7 @@ function Cards(props) {
                         <strong>Photo:{props.employee.picture.thumbnail}</strong>
                     </li>
                     <li>
-                        Name: {props.employee.name.title}
+                        Name: {props.employee.name.title} {props.employee.name.first} {props.employee.name.last}
                     </li>
                     <li>
                         <strong>phone:{props.employee.phone}</strong>
