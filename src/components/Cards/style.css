@@ -1,4 +1,26 @@
-.card {
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr {
+  background-color: wheat;
+}
+
+/* tbody tr:nth-child(odd){
+  background-color: #4C8BF5;
+  color: #fff;
+} */
+
+
+
+/* .card {
     background: #fff;
     border-radius: 2px;
     height: 325px;
@@ -45,4 +67,4 @@
   .card > .remove:hover {
     color: #d50000;
   }
-  
+   */

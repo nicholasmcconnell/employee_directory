@@ -41,10 +41,10 @@ function App() {
       // let regex = new RegExp(' /' + first + '|' + last + '/g');
       // return event.target.value.match(regex);
 
-      // return fullName.includes(employee.name.first) || fullName.includes(employee.name.last); //// THIS WORKS!
+      return fullName.includes(employee.name.first) || fullName.includes(employee.name.last); //// THIS WORKS!
 
-      console.log(employee.name.first, fullName[0]);
-     console.log(employee.name.first.startsWith(fullName[0]));
+      // console.log(employee.name.first, fullName[0]);
+    //  console.log(employee.name.first.startsWith(fullName[0]));
       // console.log(employee.name.first.match(new RegExp('^' + fullName[0], 'i')));
       // return fullName.filter(name => employee.name.first.match(new RegExp('^' + name, 'i'))||employee.name.last.match(new RegExp('^' + name, 'i')));
       // return employee.name.first.match(new RegExp('^' + fullName[0], 'i'));
