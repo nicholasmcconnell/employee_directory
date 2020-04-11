@@ -6,7 +6,8 @@ import React, { useState, useEffect } from 'react';
 import * as API from "./utils/API";
 import SearchBar from './components/SearchBar';
 import Header from './components/Header'
-import Cards from './components/Cards';
+// import Cards from './components/Cards';
+import Table from './components/Table'
 import { titleCase } from 'title-case';
 
 function App() {
@@ -128,11 +129,16 @@ function App() {
         handleInputChange={handleInputChange}
         result={search}
       />
-      {/* <div><SearchBar /></div> */}
-      {employeeList.map(employee => (
+    <Table employeeList={employeeList}
 
+     
+    
+    />
+    {/* {employeeList.map(employee => (
         <Cards key={employee.id.value} employee={employee} />
-      ))}
+      ))} */}
+
+
     </div>
   );
 }

@@ -4,15 +4,15 @@ import '../Cards/style.css';
 function Cards(props) {
     return (
 
-        <table className="sortable">
-            <thead>
-                <tr>
-                    <th>Image:</th>
-                    <th>Name:</th>
-                    <th>Phone:</th>
-                    <th>DOB:</th>
-                </tr>
-            </thead>
+        // <table className="sortable">
+        //     <thead>
+        //         <tr>
+        //             <th>Image:</th>
+        //             <th>Name:</th>
+        //             <th>Phone:</th>
+        //             <th>DOB:</th>
+        //         </tr>
+        //     </thead>
             <tbody>
                 <tr>
                     <td><img src={props.employee.picture.thumbnail} alt="" border="3" height="125" width="125" ></img> </td>
@@ -21,7 +21,7 @@ function Cards(props) {
                     <td>{props.employee.dob.date}</td>
                 </tr>
             </tbody>
-        </table>
+        // </table>
 
 
 
