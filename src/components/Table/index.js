@@ -6,7 +6,7 @@ import '../Table/style.css';
 function Table({ employeeList }) {
     // console.log(prop)
     // let employeeList = Array.from(prop);
-    console.log("in table " + typeof employeeList)
+    console.log(employeeList)
     if(employeeList.length === 0){
 
     }
@@ -29,8 +29,8 @@ function Table({ employeeList }) {
                     <td>{props.employee.phone}</td>
                     <td>{props.employee.dob.date}</td> */}
                 {employeeList.map(employee => (
-
-                    <Cards key={employee.id.value} employee={employee} />
+                        //give each card an id -- this may not be accessing it!
+                    <Cards key={employee.email} employee={employee} />
                 ))}
                 {/* </tr> */}
             </tbody>
