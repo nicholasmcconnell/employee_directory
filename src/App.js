@@ -35,14 +35,21 @@ function App() {
     // let fullName[0].charAt(0) = fullName[0].charAt(0).toUpperCase();
     // let fullName[1].charAt(0).toUpperCase();
     // new RegExp('^' + query, 'i');
+    console.log(fullName);
     
     setEmployeeList(employeeListMaster.filter(employee => {
       // let first = employee.name.first;
       // let last = employee.name.last;
       // let regex = new RegExp(' /' + first + '|' + last + '/g');
       // return event.target.value.match(regex);
+      if(fullName.length === 0) {
+        return;
+      } else if (fullName.length === 1) {
+        return employee.name.first.includes(fullName[0]) || employee.name.last.includes(fullName[0]);
+      }
 
-      return fullName.includes(employee.name.first) || fullName.includes(employee.name.last); //// THIS WORKS!
+      console.log(fullName, employee)
+      return employee.name.first.includes(fullName[0]) || employee.name.last.includes(fullName[1]); //// THIS WORKS!
 
       // console.log(employee.name.first, fullName[0]);
     //  console.log(employee.name.first.startsWith(fullName[0]));
