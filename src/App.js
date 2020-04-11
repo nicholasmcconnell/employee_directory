@@ -46,10 +46,12 @@ function App() {
         return;
       } else if (fullName.length === 1) {
         return employee.name.first.includes(fullName[0]) || employee.name.last.includes(fullName[0]);
+      }else if (fullName.length === 2){
+
+        return employee.name.first.includes(fullName[0]) && employee.name.last.includes(fullName[1]); //// THIS WORKS!
       }
 
       console.log(fullName, employee)
-      return employee.name.first.includes(fullName[0]) || employee.name.last.includes(fullName[1]); //// THIS WORKS!
 
       // console.log(employee.name.first, fullName[0]);
     //  console.log(employee.name.first.startsWith(fullName[0]));
