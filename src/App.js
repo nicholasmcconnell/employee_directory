@@ -28,18 +28,18 @@ function App() {
 
     console.log("handleSort use effet " + click)
 
-    if (click === "") {
-      click = "1";
-      // setClick(click);
-      setEmployeeList(employeeList.sort((a, b) => {
-        if (a.name.first < b.name.first) { return -1; }
-        if (a.name.first > b.name.first) { return 1; }
-        return 0;
-      }));
+    // if (click === "") {
+    //   click = "1";
+    //   // setClick(click);
+    //   setEmployeeList(employeeList.sort((a, b) => {
+    //     if (a.name.first < b.name.first) { return -1; }
+    //     if (a.name.first > b.name.first) { return 1; }
+    //     return 0;
+    //   }));
 
-      setEmployeeList(setEmployeeList);
+    //   setEmployeeList(setEmployeeList);
 
-    } else if (click === "1") {
+   if (click === "1") {
       click = "0";
       // setClick(click);
       setEmployeeList(employeeList.sort((a, b) => {
@@ -62,7 +62,7 @@ function App() {
       console.log("after ifs in effect")
 
       setEmployeeList(setEmployeeList);
-      setClick(click);
+      // setClick(click);
 
     }
 
