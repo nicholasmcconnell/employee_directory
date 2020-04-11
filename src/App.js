@@ -21,8 +21,15 @@ function App() {
 
   // console.log("search " + search)
 
-  // useEffect(() => console.log(employeeList), [employeeList]);
   // useEffect(() => console.log(employeeListMaster), [employeeListMaster]);
+
+  useEffect(() => {
+
+    console.log("handleSort use effet")
+
+  }, );
+
+
   useEffect(() => {
 
     if (!search) {
@@ -79,6 +86,65 @@ function App() {
 
 
   }, []);
+
+  // const ascending = (a, b) => {
+  //   // Use toUpperCase() to ignore character casing
+  //   const nameA = a.name.last.toUpperCase();
+  //   const nameB = b.name.last.toUpperCase();
+
+  //   let comparison = 0;
+  //   if (nameA > nameB) {
+  //     comparison = 1;
+  //   } else if (nameA < nameB) {
+  //     comparison = -1;
+  //   }
+  //   return comparison * 1;
+  // };
+
+
+  const handleSort = () => {
+
+    console.log("in handleSort");
+
+    // for (let i = 0; i < employeeList.length; i++) {
+    //   let a = i;
+    //   let b = i+1;
+
+    // }
+
+    setEmployeeList( employeeList.sort((a, b) => {
+      if(a.name.first < b.name.first) { return -1; }
+      if(a.name.first > b.name.first) { return 1; }
+      return 0;
+  }));
+
+  
+
+  setEmployeeList(setEmployeeList);
+
+  
+
+    // console.log(employeeList[employeeList].name.first);
+    // ascending(a, b);
+
+   
+    // const descending = (a, b) => {
+    //   // Use toUpperCase() to ignore character casing
+    //   const nameA = a.name.last.toUpperCase();
+    //   const nameB = b.name.last.toUpperCase();
+
+    //   let comparison = 0;
+    //   if (nameA > nameB) {
+    //     comparison = 1;
+    //   } else if (nameA < nameB) {
+    //     comparison = -1;
+    //   }
+    //   return comparison * -1;
+    // };
+
+  }
+
+
 
 
 
@@ -138,7 +204,7 @@ function App() {
         handleInputChange={handleInputChange}
         result={search}
       />
-    <Table employeeList={employeeList}
+    <Table employeeList={employeeList} handleSort={handleSort}
 
      
     
