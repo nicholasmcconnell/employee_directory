@@ -14,6 +14,7 @@ function App() {
   let [employeeList, setEmployeeList] = useState([]);
   const [employeeListMaster, setEmployeeListMaster] = useState([]);
   const [search, setSearch] = useState("");
+  let [click, setClick] = useState("1");
   // const [error, setError] = useState("");
   //1. user is typing
   //2. as search fills names are filtered to match search
@@ -25,9 +26,47 @@ function App() {
 
   useEffect(() => {
 
-    console.log("handleSort use effet")
+    console.log("handleSort use effet " + click)
 
-  }, );
+    if (click === "") {
+      click = "1";
+      // setClick(click);
+      setEmployeeList(employeeList.sort((a, b) => {
+        if (a.name.first < b.name.first) { return -1; }
+        if (a.name.first > b.name.first) { return 1; }
+        return 0;
+      }));
+
+      setEmployeeList(setEmployeeList);
+
+    } else if (click === "1") {
+      click = "0";
+      // setClick(click);
+      setEmployeeList(employeeList.sort((a, b) => {
+        if (a.name.first > b.name.first) { return -1; }
+        if (a.name.first < b.name.first) { return 1; }
+        return 0;
+      }));
+
+      setEmployeeList(setEmployeeList);
+
+    } else if (click === "0") {
+      click = "1";
+      // setClick(click);
+      setEmployeeList(employeeList.sort((a, b) => {
+        if (a.name.first < b.name.first) { return -1; }
+        if (a.name.first > b.name.first) { return 1; }
+        return 0;
+      }));
+
+      console.log("after ifs in effect")
+
+      setEmployeeList(setEmployeeList);
+      setClick(click);
+
+    }
+
+  }, [click]);
 
 
   useEffect(() => {
@@ -43,17 +82,17 @@ function App() {
     // let fullName[1].charAt(0).toUpperCase();
     // new RegExp('^' + query, 'i');
     console.log(fullName);
-    
+
     setEmployeeList(employeeListMaster.filter(employee => {
       // let first = employee.name.first;
       // let last = employee.name.last;
       // let regex = new RegExp(' /' + first + '|' + last + '/g');
       // return event.target.value.match(regex);
-      if(fullName.length === 0) {
+      if (fullName.length === 0) {
         return;
       } else if (fullName.length === 1) {
         return employee.name.first.includes(fullName[0]) || employee.name.last.includes(fullName[0]);
-      }else if (fullName.length === 2){
+      } else if (fullName.length === 2) {
 
         return employee.name.first.includes(fullName[0]) && employee.name.last.includes(fullName[1]); //// THIS WORKS!
       }
@@ -61,7 +100,7 @@ function App() {
       console.log(fullName, employee)
 
       // console.log(employee.name.first, fullName[0]);
-    //  console.log(employee.name.first.startsWith(fullName[0]));
+      //  console.log(employee.name.first.startsWith(fullName[0]));
       // console.log(employee.name.first.match(new RegExp('^' + fullName[0], 'i')));
       // return fullName.filter(name => employee.name.first.match(new RegExp('^' + name, 'i'))||employee.name.last.match(new RegExp('^' + name, 'i')));
       // return employee.name.first.match(new RegExp('^' + fullName[0], 'i'));
@@ -101,10 +140,19 @@ function App() {
   //   return comparison * 1;
   // };
 
-
   const handleSort = () => {
 
-    console.log("in handleSort");
+    console.log("in handleSort " + click);
+    setClick(click);
+
+    if(click === "1") {
+      click = "0";
+      setClick(click);
+    }else if (click === "0") {
+      click = "1";
+      setClick(click);
+    }
+
 
     // for (let i = 0; i < employeeList.length; i++) {
     //   let a = i;
@@ -112,22 +160,22 @@ function App() {
 
     // }
 
-    setEmployeeList( employeeList.sort((a, b) => {
-      if(a.name.first < b.name.first) { return -1; }
-      if(a.name.first > b.name.first) { return 1; }
-      return 0;
-  }));
+    // setEmployeeList(employeeList.sort((a, b) => {
+    //   if (a.name.first < b.name.first) { return -1; }
+    //   if (a.name.first > b.name.first) { return 1; }
+    //   return 0;
+    // }));
 
-  
 
-  setEmployeeList(setEmployeeList);
 
-  
+    // setEmployeeList(setEmployeeList);
+
+
 
     // console.log(employeeList[employeeList].name.first);
     // ascending(a, b);
 
-   
+
     // const descending = (a, b) => {
     //   // Use toUpperCase() to ignore character casing
     //   const nameA = a.name.last.toUpperCase();
@@ -204,12 +252,12 @@ function App() {
         handleInputChange={handleInputChange}
         result={search}
       />
-    <Table employeeList={employeeList} handleSort={handleSort}
+      <Table employeeList={employeeList} handleSort={handleSort}
 
-     
-    
-    />
-    {/* {employeeList.map(employee => (
+
+
+      />
+      {/* {employeeList.map(employee => (
         <Cards key={employee.id.value} employee={employee} />
       ))} */}
 

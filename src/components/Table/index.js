@@ -3,7 +3,7 @@ import Cards from '../Cards/index'
 import '../Table/style.css';
 
 
-function Table({ employeeList, handleSort }) {
+function Table({ employeeList, handleSort}) {
     // console.log(prop)
     // let employeeList = Array.from(prop);
     console.log(employeeList)
