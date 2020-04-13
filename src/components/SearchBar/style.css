@@ -1,9 +1,28 @@
 form.search {
-    overflow: auto;
-    margin-bottom: 10px;
-  }
-  
-  form.search button[type="submit"] {
-    /* float: right; */
-    margin-top: 10px;
-  }
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+form.search button[type="submit"] {
+  /* float: right; */
+  margin-top: 10px;
+}
+
+.form-group {
+
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.input {
+  border: violet;
+}
+
+.placeholder {
+  font-size: 20px;
+}

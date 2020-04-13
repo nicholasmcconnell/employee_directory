@@ -1,6 +1,6 @@
 import React from 'react';
 import Cards from '../Cards/index'
-import '../Table/style.css';
+import './style.css';
 
 
 function Table({ employeeList, handleSort }) {

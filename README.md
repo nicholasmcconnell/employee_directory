@@ -1,3 +1,6 @@
+    // start: react-scripts start with start: serve -s build
+
+
 TODO
 
 1. Each employee getting a unique ID.

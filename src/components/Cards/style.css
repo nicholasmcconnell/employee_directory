@@ -10,13 +10,14 @@ th, td {
 }
 
 tr {
-  background-color: wheat;
+  background-color: white;
+  font-size: 20px;
 }
 
-/* tbody tr:nth-child(odd){
-  background-color: #4C8BF5;
-  color: #fff;
-} */
+tbody tr:nth-child(odd){
+  background-color: lightgray;
+  color:black;
+}
 
 
 

@@ -1,0 +1,11 @@
+.sortable {
+
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 8px;
+}

@@ -1,13 +1,20 @@
 header {
     height: 200px;
-    font-weight: bold;
-    color: red;
-    background-color: darkblue;
+    font-weight: bolder;
+    font-size: 100em;
+    color: rgb(228, 100, 100);
+    background-color: rgb(75, 75, 223);
     margin-bottom: 20px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 };
+
+.btn {
+    font-size: 20px;
+}
 
 
