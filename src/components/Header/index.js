@@ -3,8 +3,14 @@ import "./style.css";
 
 function Header() {
     return (
-        <div className="header">
-            <h1 className="display-1">Employee Directory</h1>
+        <div className="container">
+
+            <div className="header jumbotron-fluid">
+                <h1 className="display-1 header-text">Employee Directory</h1>
+            </div>
+
+
+
         </div>
     );
 }

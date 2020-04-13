@@ -5,7 +5,7 @@ function Cards(props) {
 
     return (
 
-        <tr>
+        <tr >
             <td><img src={props.employee.picture.thumbnail} alt="" border="3" height="125" width="125" ></img> </td>
             <td>{props.employee.name.first} {props.employee.name.last}</td>
             <td>{props.employee.phone}</td>

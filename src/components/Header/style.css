@@ -1,5 +1,6 @@
 header {
-    height: 200px;
+    height: 220px;
+    width: 100%;
     font-weight: bolder;
     font-size: 100em;
     color: rgb(228, 100, 100);
@@ -9,9 +10,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-};
+    padding: 10px;
+}
 
+;
+/* .header-text {
 
+    margin: 10px;
 
+} */

@@ -13,12 +13,12 @@ function Table({ employeeList, handleSort }) {
         <table className="sortable">
             <thead>
                 <tr>
-                    <th><i className="fas fa-sort"></i>Image:</th>
+                    <th>Image:</th>
                     <button className="btn" onClick={handleSort}>
                         <i className="fas fa-sort"></i>Name:
                     </button>
-                    <th><i className="fas fa-sort"></i>Phone:</th>
-                    <th><i className="fas fa-sort"></i>DOB:</th>
+                    <th>Phone:</th>
+                    <th>DOB:</th>
                 </tr>
             </thead>
             <tbody>
