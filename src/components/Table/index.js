@@ -4,33 +4,34 @@ import './style.css';
 
 
 function Table({ employeeList, handleSort }) {
-    
+
     if (employeeList.length === 0) {
 
     }
     return (
-
-        <table className="sortable">
-            <thead>
-                <tr>
-                    <th>Image:</th>
-                    <button className="btn" onClick={handleSort}>
-                        <i className="fas fa-sort"></i>Name:
+        <div className="container">
+            <table className="sortable">
+                <thead>
+                    <tr>
+                        <th>Image:</th>
+                        <button className="btn" onClick={handleSort}>
+                            <i className="fas fa-sort"></i>Name:
                     </button>
-                    <th>Phone:</th>
-                    <th>DOB:</th>
-                </tr>
-            </thead>
-            <tbody>
+                        <th>Phone:</th>
+                        <th>DOB:</th>
+                    </tr>
+                </thead>
+                <tbody>
 
 
-                {employeeList.map(employee => (
+                    {employeeList.map(employee => (
 
-                    <Cards key={employee.email} employee={employee} />
-                ))}
+                        <Cards key={employee.email} employee={employee} />
+                    ))}
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     );
 }
 

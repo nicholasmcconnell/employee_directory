@@ -1,6 +1,6 @@
 header {
     height: 220px;
-    width: 100%;
+    /* width: 100%; */
     font-weight: bolder;
     font-size: 100em;
     color: rgb(228, 100, 100);
@@ -10,7 +10,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 60px;
 }
 
 ;

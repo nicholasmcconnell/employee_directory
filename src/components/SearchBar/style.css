@@ -10,8 +10,8 @@ form.search button[type="submit"] {
 
 .form-group {
 
-  margin-left: 20px;
-  margin-right: 20px;
+  /* margin-left: 40px;
+  margin-right: 40px; */
 
 }
 
@@ -19,6 +19,7 @@ h3 {
   font-weight: bold;
 }
 
-.input {
-  border: violet;
+.form-control {
+  height: 50px;
+  font-size: 20px;
 }
