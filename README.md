@@ -28,4 +28,4 @@ A demo is on the way!
 
 ## Contributers
 
-- Alyssa Cucunato
+- Nick McConnell
