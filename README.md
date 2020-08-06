@@ -12,6 +12,7 @@ An employee directory created with React.js utilizing filter and search options.
   - Filter employee's alphabetically by last name.
 
 ## Demonstration
+A demo is on the way!
 
 
 
